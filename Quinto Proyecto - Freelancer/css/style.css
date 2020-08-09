@@ -1,0 +1,268 @@
+:root {
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+html {
+    font-size: 62.5%;
+    min-height: 100%;
+    /**Reset para REMS - 62.5% = 10px de 16px**/
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/** Globales **/
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+a {
+    font-size: 1.8rem;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.6rem;
+}
+
+/** Header **/
+
+.site-header {
+    background-color: white;
+}
+
+.barra {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.barra a {
+    color: var(--oscuro);
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .barra a {
+        margin-bottom: 0;
+    }
+}
+
+.barra a:last-of-type {
+    margin-bottom: 0;
+}
+
+
+/** Titulo **/
+.hero {
+    height: 45rem;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::after {
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contenedor-hero {
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.contenedor-hero i {
+    font-size: 5rem;
+    color: var(--primario);
+}
+
+/** Boton **/
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 5rem;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    font-size: 2.2rem;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+/** Contenido **/
+.contenedor {
+    max-width: 1200px;
+    margin: 3rem auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.74);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.74);
+    box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.74);
+}
+
+.contenedor-servicios {
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    
+    .contenedor-servicios{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .servicio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconos {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--primario);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.iconos {
+    font-size: 3rem;
+}
+
+/** Formulario **/
+form {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin: 3rem;
+}
+
+form legend {
+    display: flex;
+    font-size: 2rem;
+    color: var(--primario);
+    text-align: center;
+    margin: 3rem 0;
+    justify-content: center;
+}
+
+
+@media (min-width: 768px) {
+    form {
+        max-width: 80rem;
+        margin: 3rem auto;
+    }
+    
+    .contenedor-campos {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .campo {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.campo label {
+    flex: 0 0 9rem;
+    color: white;
+}
+
+.campo input:not([type="submit"]){
+    flex: 1;
+    height: 4rem;
+}
+
+.campo textarea {
+    height: 6rem;
+    flex: 1;
+}
+
+.w-100 {
+    flex: 0 0 100%;
+}
+
+.enviar {
+    display: flex;
+    justify-content: center;
+}
